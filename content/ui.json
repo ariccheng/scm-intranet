@@ -71,7 +71,8 @@
 
   "external.continue": "Continue",
   "external.chatTitle": "Opening a chat with {name}",
-  "external.chatText": "The chat opens in a new tab, in the university's AI tool, outside the company intranet. Come back to this tab when you are done.",
+  "external.chatText": "The chat with {name} opens in a separate window, in ASU's AI tool, outside the company intranet. The first time, sign in with your ASU account. Message {name} again to go back to the same chat.",
+  "external.dontAsk": "Don't show this again",
   "external.linkTitle": "Leaving the intranet",
   "external.linkText": "This opens in a new tab, outside the company intranet.",
   "external.unsetTitle": "Link not set up yet",

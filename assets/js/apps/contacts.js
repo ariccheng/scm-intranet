@@ -31,7 +31,7 @@ export function mount(body, ctx) {
       const st = status(p), on = st === "online", url = ctx.botUrl(p.id), quota = ctx.quota(p.id);
       const msg = el("button.btn" + (on ? ".primary" : ""), { type: "button", disabled: !on, "aria-label": t("contacts.messageTo", { name: p.name }) },
         icon("message-circle", 16), el("span", { text: t("contacts.message") }));
-      msg.addEventListener("click", () => ctx.openExternal({ url, kind: "chat", name: p.name }));
+      msg.addEventListener("click", () => ctx.openExternal({ url, kind: "chat", name: p.name, id: p.id }));
       return el("li.contact" + (on ? ".online" : ""), {},
         el("div.contact-top", {}, avatar(p, 44), el("div", {}, el("h3.contact-name", { text: p.name }), el("p.muted", { text: p.title || "" }))),
         el("p.contact-dept", {}, el("span", { text: p.department || "" }), p.external ? el("span.tag", { text: t("contacts.external") }) : null),

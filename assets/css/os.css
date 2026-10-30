@@ -114,6 +114,8 @@ html[data-layout="mobile"] .os-banner { display: block; flex: none; padding: 7px
 .dialog-title { font-size: 17px; }
 .dialog-text { color: var(--text); }
 .dialog-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; margin-top: 6px; }
+.dialog-check { display: flex; align-items: center; gap: 7px; margin-right: auto; color: var(--muted); font-size: 13px; cursor: pointer; }
+.dialog-check input { width: 16px; height: 16px; margin: 0; accent-color: var(--accent); }
 
 /* ---- Phone layout ---- */
 html[data-layout="mobile"] .os-top { height: 46px; }

@@ -62,7 +62,7 @@ export function mount(body, ctx) {
     back.addEventListener("click", () => { root.dataset.view = "list"; list.querySelector("[aria-current]")?.focus(); });
     const reply = el("button.btn" + (url !== undefined ? ".primary" : ""), { type: "button", disabled: url === undefined, "aria-describedby": url === undefined ? "reply-why" : null },
       icon("reply", 16), el("span", { text: t("mail.reply") }));
-    reply.addEventListener("click", () => ctx.openExternal({ url, kind: "chat", name }));
+    reply.addEventListener("click", () => ctx.openExternal({ url, kind: "chat", name, id: m.from }));
     const files = m.attachments.map(id => world.files.byId.get(id));
     const content = el("div.mail-body.prose");
     content.innerHTML = render(m.body, { base: m.base, tokens: tokens() });
