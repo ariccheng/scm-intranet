@@ -5,7 +5,7 @@
     { "id": "read-handbook", "text": "Read the welcome email and the employee handbook" },
     { "id": "read-it-note", "text": "Read the IT Service Desk note" },
     { "id": "contact-front-desk", "text": "Say hello to Jordan at the front desk" },
-    { "id": "look-around-desk", "text": "Look over the store map, the fall menu and the stores and menu list" },
+    { "id": "look-around-desk", "text": "Look over the store map, the spring menu and the stores and menu list" },
     { "id": "team-signup", "text": "Submit your team on Canvas by Friday" }
   ],
   "phoneNotifications": [

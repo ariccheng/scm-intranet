@@ -5,7 +5,7 @@
 Run it from the scm-intranet folder after changing the stores or the menu
 in content/company.json. It writes content/weeks/week-01/files/
 stores-and-menu.xlsx with three sheets: Stores (code, name, year opened,
-type), Menu (items, with "New" for new items) and Sauces. Public facts
+type), Menu (items, "New", ingredients, dietary tags) and Sauces. Public facts
 only: no business data goes into this file.
 """
 import json
@@ -37,9 +37,12 @@ def main():
     wb.remove(wb.active)
     sheet(wb, "Stores", ["Code", "Store", "Opened", "Type"],
           [[s.get("code"), s.get("name"), s.get("opened"), s.get("type")] for s in co.get("stores") or []], [8, 26, 10, 14])
-    sheet(wb, "Menu", ["Item", "New"],
-          [[m.get("name"), "New" if m.get("new") else ""] for m in menu.get("items") or []], [32, 8])
-    sheet(wb, "Sauces", ["Sauce"], [[s] for s in menu.get("sauces") or []], [28])
+    tag = {"vegetarian": "Vegetarian", "vegan": "Vegan", "gf": "Gluten-free", "spicy": "Spicy"}
+    sheet(wb, "Menu", ["Item", "New", "What's in it", "Dietary"],
+          [[m.get("name"), "New" if m.get("new") else "", m.get("description", ""), ", ".join(tag.get(x, x) for x in m.get("tags") or [])]
+           for m in menu.get("items") or []], [32, 8, 70, 24])
+    sauce = lambda x: [x, ""] if isinstance(x, str) else [x.get("name"), x.get("description", "")]
+    sheet(wb, "Sauces", ["Sauce", "Description"], [sauce(x) for x in menu.get("sauces") or []], [28, 44])
     wb.properties.title = f'{co.get("name", "")} stores and menu'
     wb.properties.creator = co.get("name", "")
     OUT.parent.mkdir(parents=True, exist_ok=True)

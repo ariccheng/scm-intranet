@@ -80,52 +80,89 @@
     }
   ],
   "menu": {
-    "season": "Fall",
+    "season": "Spring",
     "items": [
       {
-        "name": "Sonoran Chicken Bowl"
+        "name": "Sonoran Chicken Bowl",
+        "description": "Grilled chicken, cilantro-lime rice, black beans, roasted corn, pico de gallo and Saguaro Green Sauce.",
+        "tags": ["gf"]
       },
       {
-        "name": "Carne Asada Bowl"
+        "name": "Carne Asada Bowl",
+        "description": "Grilled marinated steak, cilantro-lime rice, pinto beans, grilled onions, cotija and Chipotle Crema.",
+        "tags": ["gf"]
       },
       {
-        "name": "Green Chile Pork Bowl"
+        "name": "Green Chile Pork Bowl",
+        "description": "Pork slow-braised in green chile, brown rice, black beans, pickled red onion and queso fresco.",
+        "tags": ["spicy", "gf"]
       },
       {
-        "name": "Desert Harvest Veggie Bowl"
+        "name": "Desert Harvest Veggie Bowl",
+        "description": "Roasted squash, sweet potato and peppers, brown rice, black beans and pepitas with Cilantro Lime Dressing.",
+        "tags": ["vegetarian", "gf"]
       },
       {
-        "name": "Spicy Tofu Bowl"
+        "name": "Spicy Tofu Bowl",
+        "description": "Crispy tofu, brown rice, charred broccoli and cabbage slaw with Gochujang Glaze.",
+        "tags": ["vegan", "spicy"]
       },
       {
-        "name": "Avocado Crunch Salad"
+        "name": "Avocado Crunch Salad",
+        "description": "Romaine and mixed greens, sliced avocado, tortilla strips, corn and cherry tomatoes with Cilantro Lime Dressing.",
+        "tags": ["vegetarian"]
       },
       {
-        "name": "Mesquite BBQ Chicken Bowl"
+        "name": "Mesquite BBQ Chicken Bowl",
+        "description": "Mesquite-grilled chicken, brown rice, crunchy slaw and roasted corn with Mesquite BBQ.",
+        "tags": ["gf"]
       },
       {
         "name": "Street Corn Elote Bowl",
-        "new": true
+        "new": true,
+        "description": "Charred street corn with cotija and chili-lime, black beans and cilantro-lime rice with Chipotle Crema.",
+        "tags": ["vegetarian"]
       },
       {
         "name": "Hatch Chile Steak Bowl",
-        "new": true
+        "new": true,
+        "description": "Grilled steak, roasted Hatch green chiles, cilantro-lime rice, pinto beans and queso fresco.",
+        "tags": ["spicy", "gf"]
       },
       {
         "name": "Kale Caesar Power Bowl",
-        "new": true
+        "new": true,
+        "description": "Kale and romaine, grilled chicken, parmesan and toasted seeds with a lemony Caesar dressing.",
+        "tags": []
       },
       {
         "name": "Gochujang Chicken Bowl",
-        "new": true
+        "new": true,
+        "description": "Gochujang-glazed chicken, brown rice, cucumber, pickled carrots and sesame.",
+        "tags": ["spicy"]
       }
     ],
     "sauces": [
-      "Saguaro Green Sauce",
-      "Chipotle Crema",
-      "Cilantro Lime Dressing",
-      "Mesquite BBQ",
-      "Gochujang Glaze"
+      {
+        "name": "Saguaro Green Sauce",
+        "description": "Tomatillo, jalapeño and cilantro. Our signature."
+      },
+      {
+        "name": "Chipotle Crema",
+        "description": "Smoky chipotle and lime, cool and creamy."
+      },
+      {
+        "name": "Cilantro Lime Dressing",
+        "description": "Bright and herby, made for greens."
+      },
+      {
+        "name": "Mesquite BBQ",
+        "description": "Sweet and smoky, with a mesquite finish."
+      },
+      {
+        "name": "Gochujang Glaze",
+        "description": "Sweet heat from Korean chili paste."
+      }
     ]
   },
   "suppliers": [
