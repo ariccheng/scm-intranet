@@ -33,5 +33,6 @@ Content adds up week by week. Only the sticky-note to-dos come from the newest w
 | `content/weeks/week-XX/` | `week.json`, `unlocks.json`, `emails/`, `files.json`, `newspaper.json`, `desk.json` |
 | `tools/check.py` | Checks content before you push (`--staging` checks staged weeks) |
 | `tools/make_stores_list.py` | Rebuilds the stores and menu spreadsheet |
+| `tools/links.py` | Copies chat and file links from `content-staging/LINKS.md` into the week files (`status`, `apply`) |
 
 Full notes for the instructor (file formats, statuses, desk art, open questions) are in `content-staging/README-full.md`, which is not pushed.
