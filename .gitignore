@@ -1,0 +1,4 @@
+.DS_Store
+
+# Never pushed: course weeks that are not open yet (publish-week.sh copies them in)
+/content-staging/

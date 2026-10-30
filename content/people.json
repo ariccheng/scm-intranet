@@ -1,0 +1,18 @@
+[
+  { "id": "daniel-alvarez", "name": "Daniel Alvarez", "title": "CEO", "department": "Executive", "contact": "email", "avatar": null,
+    "bio": "Leads Saguaro Kitchen Co. Writes to the team by email." },
+  { "id": "jordan-lee", "name": "Jordan Lee", "title": "HR & Front Desk Coordinator", "department": "HR & Front Desk", "avatar": null,
+    "bio": "Your first point of contact. Ask Jordan where things are and who does what." },
+  { "id": "priya-nair", "name": "Priya Nair", "title": "Marketing & Channels Manager", "department": "Marketing & Channels", "avatar": null,
+    "bio": "Looks after menu launches, promotions, the app and our delivery partners." },
+  { "id": "marcus-johnson", "name": "Marcus Johnson", "title": "Regional Restaurant Operations Manager", "department": "Restaurant Operations", "avatar": null,
+    "bio": "Works with the managers of our stores across the Phoenix area." },
+  { "id": "diego-ramirez", "name": "Diego Ramirez", "title": "Central Kitchen & Distribution Supervisor", "department": "Central Kitchen & Distribution", "avatar": null,
+    "bio": "Runs the central kitchen in Tempe and the team that supplies our stores." },
+  { "id": "sarah-kim", "name": "Sarah Kim", "title": "Procurement Manager", "department": "Procurement", "avatar": null,
+    "bio": "Works with our food and packaging suppliers. Supplier contact goes through Sarah." },
+  { "id": "emily-chen", "name": "Emily Chen", "title": "Finance Manager", "department": "Finance", "avatar": null,
+    "bio": "Leads the finance team." },
+  { "id": "it-service-desk", "name": "IT Service Desk", "title": "Team mailbox", "department": "IT", "contact": "email", "listed": false, "avatar": null,
+    "bio": "Sets up accounts and access for new staff." }
+]

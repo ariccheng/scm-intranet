@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- placeholder logo: a saguaro under a small sun on a maroon tile. Replace this file, or point company.json "logo" at a new one -->
+  <rect width="64" height="64" rx="14" fill="#8C1D40"/>
+  <circle cx="47" cy="16" r="5" fill="#FFC627"/>
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 50V15" stroke-width="10"/>
+    <path d="M28 39h-6.5a3 3 0 0 1-3-3v-8" stroke-width="7"/>
+    <path d="M36 33h5.5a3 3 0 0 0 3-3v-4" stroke-width="7"/>
+    <path d="M14 51h36" stroke-width="3.5"/>
+  </g>
+</svg>

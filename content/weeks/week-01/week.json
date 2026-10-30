@@ -1,0 +1,18 @@
+{
+  "_note": "Class time 10:30-11:45 is a placeholder; students are told to find the time and room on Canvas.",
+  "loginNotification": { "text": "New message from HR", "emailId": "w01-welcome" },
+  "todos": [
+    { "id": "read-handbook", "text": "Read the welcome email and the employee handbook" },
+    { "id": "read-it-note", "text": "Read the IT Service Desk note" },
+    { "id": "contact-front-desk", "text": "Say hello to Jordan at the front desk" },
+    { "id": "look-around-desk", "text": "Look over the store map, the fall menu and the stores and menu list" },
+    { "id": "team-signup", "text": "Submit your team on Canvas by Friday" }
+  ],
+  "phoneNotifications": [
+    { "id": "w01-ceo-next-week", "sender": "Calendar", "text": "Next week: a memo from Daniel Alvarez, our CEO, will be on your desk.", "time": "Mon 08:00" }
+  ],
+  "calendarEvents": [
+    { "id": "w01-class", "title": "Supply Chain Fundamentals class", "kind": "class", "start": "Thu 10:30", "end": "Thu 11:45", "location": "Time and room: see Canvas" },
+    { "id": "w01-team-signup", "title": "Team sign-up due on Canvas", "kind": "deadline", "start": "Fri 23:59" }
+  ]
+}

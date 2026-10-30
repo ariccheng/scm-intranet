@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice">
+  <!-- placeholder wallpaper: desert ridges at dusk in warm greys; dark enough for white text on the lock screen -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#232323"/>
+      <stop offset=".55" stop-color="#34302D"/>
+      <stop offset="1" stop-color="#3B3631"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="1450" cy="560" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC627" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#FFC627" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+  <path d="M0 620C220 560 420 520 640 548s420 70 660 34 420-104 620-80V1080H0Z" fill="#3A3633"/>
+  <path d="M0 720c260-60 520-92 820-58s560 64 820 24 220-38 280-36V1080H0Z" fill="#33302D"/>
+  <path d="M0 830c320-40 640-50 980-16s620 26 940-18V1080H0Z" fill="#2B2927"/>
+  <path d="M0 940c360-30 760-36 1120-8s560 10 800-12V1080H0Z" fill="#232221"/>
+  <g fill="none" stroke="#FFFFFF" stroke-opacity=".07" stroke-width="2">
+    <path d="M0 620C220 560 420 520 640 548s420 70 660 34 420-104 620-80"/>
+    <path d="M0 720c260-60 520-92 820-58s560 64 820 24 220-38 280-36"/>
+    <path d="M0 830c320-40 640-50 980-16s620 26 940-18"/>
+  </g>
+</svg>

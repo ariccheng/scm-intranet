@@ -1,0 +1,182 @@
+/* ---- Apps ------------------------------------------------------------------------------------
+   Shared pieces first (states, lists, chips), then one block per app.
+   Apps switch to one column below 640px of window width (@container).   */
+.state { display: grid; justify-items: center; gap: 8px; max-width: 46ch; margin: 48px auto; padding: 0 20px; color: var(--muted); text-align: center; }
+.state h3 { color: var(--text); font-size: 16px; }
+.state-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: var(--panel); color: var(--text-2); }
+.state-error .state-icon { color: var(--danger); }
+.state-details { margin: 4px 0 0; padding: 0; list-style: none; font-size: 12.5px; }
+.muted { color: var(--muted); }
+.part-error { display: flex; gap: 10px; margin: 0 0 12px; padding: 10px 12px; border: 1px solid var(--danger-line); border-radius: var(--radius);
+  background: var(--danger-soft); color: var(--text); font-size: 13px; }
+.part-error > svg { flex: none; margin-top: 2px; color: var(--danger); }
+.part-error ul { margin: 4px 0 0; padding-left: 18px; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { min-height: 32px; padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: 13px; }
+.chip:hover { border-color: var(--line-strong); background: var(--panel); }
+/* the chosen chip: dark grey, so the accent stays for actions */
+.chip[aria-pressed="true"] { border-color: var(--text); background: var(--text); color: #fff; }
+.avatar { display: inline-grid; flex: none; place-items: center; border-radius: 50%; color: #fff; font-weight: 600; object-fit: cover; }
+
+/* file cards: Mail attachments and the Files list */
+.file-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.file-card, .file-row-item { display: flex; align-items: center; gap: 10px; min-width: 0; padding: 8px 12px; border: 1px solid var(--line);
+  border-radius: var(--radius); background: #fff; color: var(--text); font-size: 13.5px; text-align: left; text-decoration: none; }
+.file-card:hover, .file-row-item:hover { border-color: var(--line-strong); background: var(--panel); }
+.file-icon { display: grid; flex: none; place-items: center; width: 34px; height: 34px; border-radius: 8px; background: var(--panel); color: var(--text-2); }
+.file-meta { display: grid; min-width: 0; }
+.file-name { overflow: hidden; font-weight: 500; white-space: nowrap; text-overflow: ellipsis; }
+.file-type { color: var(--muted); font-size: 12.5px; }
+.file-go { margin-left: auto; color: var(--muted); }
+.file-card .file-go { margin-left: 8px; }
+
+/* Markdown bodies */
+.prose { line-height: 1.6; overflow-wrap: anywhere; }
+.prose > * + * { margin-top: .8em; }
+.prose h3, .prose h4, .prose h5 { margin-top: 1.2em; font-size: 15px; }
+.prose ul, .prose ol { padding-left: 1.4em; }
+.prose li + li { margin-top: .25em; }
+.prose blockquote { margin: 0; padding-left: 12px; border-left: 3px solid var(--line); color: var(--muted); }
+.prose code { padding: 1px 5px; border-radius: 4px; background: var(--panel); font-size: .92em; }
+.prose hr { border: 0; border-top: 1px solid var(--line); }
+
+/* ---- Mail ---- */
+.mail { display: grid; grid-template-columns: 170px minmax(0, 300px) minmax(0, 1fr); height: 100%; }
+.mail-folders { padding: 10px 8px; border-right: 1px solid var(--line); background: var(--panel); }
+.mail-folder, .files-folder { display: flex; align-items: center; gap: 8px; width: 100%; padding: 7px 10px; border: 0; border-radius: 6px;
+  background: transparent; text-align: left; }
+.mail-folder:hover, .files-folder:hover { background: var(--panel-2); }
+.mail-folder[aria-current], .files-folder[aria-current] { background: #fff; font-weight: 600; box-shadow: var(--shadow-1); }
+.mail-folder .count { margin-left: auto; color: var(--accent); font-size: 12.5px; font-weight: 600; }
+.mail-col { min-height: 0; overflow: auto; border-right: 1px solid var(--line); }
+.mail-col > .part-error { margin: 8px; }
+.mail-list { margin: 0; padding: 0; list-style: none; }
+.mail-item { display: grid; gap: 2px; width: 100%; padding: 11px 14px 11px 18px; border: 0; border-bottom: 1px solid var(--line);
+  background: transparent; text-align: left; position: relative; }
+.mail-item:hover { background: var(--panel); }
+/* the list scrolls, which would cut the sides off an outer focus ring, so it is drawn inside */
+.mail-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; box-shadow: none; }
+.mail-item[aria-current]:focus-visible { box-shadow: inset 3px 0 0 var(--accent); }
+.mail-item[aria-current] { background: var(--panel-2); box-shadow: inset 3px 0 0 var(--accent); }
+.mail-item.unread::before { content: ""; position: absolute; left: 7px; top: 17px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.mail-item.unread .mail-from, .mail-item.unread .mail-subject { font-weight: 600; }
+.mail-line { display: flex; justify-content: space-between; gap: 8px; }
+.mail-from { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.mail-time { flex: none; color: var(--muted); font-size: 12.5px; }
+.mail-subject { overflow: hidden; color: var(--text); font-size: 13.5px; white-space: nowrap; text-overflow: ellipsis; }
+.mail-none { padding: 24px 16px; color: var(--muted); }
+.mail-reader { display: grid; align-content: start; gap: 14px; min-height: 0; overflow: auto; padding: 22px 28px 28px; }
+.mail-pick { display: grid; justify-items: center; gap: 8px; margin-top: 18%; color: var(--muted); }
+.mail-back { display: none; justify-self: start; }
+.mail-title { font-size: 20px; }
+.mail-head { display: flex; align-items: center; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.mail-who p { font-size: 13.5px; }
+.mail-files h4 { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; color: var(--muted); font-size: 12.5px; font-weight: 500; }
+.mail-body { max-width: 68ch; }
+.mail-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--line); }
+.mail-actions p { font-size: 13px; }
+
+@container app (max-width: 720px) {
+  .mail { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+  .mail-folders { display: flex; gap: 4px; overflow-x: auto; padding: 6px 8px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .mail-folder { width: auto; }
+  .mail-col { border-right: 0; }
+  .mail[data-view="list"] .mail-reader, .mail[data-view="read"] .mail-col { display: none; }
+  .mail-reader { padding: 16px; }
+  .mail-back { display: inline-flex; }
+}
+
+/* ---- Contacts ---- */
+.contacts, .files, .calendar, .dashboards, .credits, .desk-app { padding: 18px 20px 24px; }
+.contacts-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.contacts-count { font-size: 13px; }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.contact { display: grid; align-content: start; gap: 8px; padding: 14px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; }
+.contact-top { display: flex; align-items: center; gap: 12px; }
+.contact-name { font-size: 15px; }
+.contact-top p { font-size: 13px; }
+.contact-dept { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; color: var(--muted); font-size: 12.5px; }
+/* small outline label, e.g. "External" for people outside the company */
+.tag { padding: 0 7px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--bg); color: var(--text-2); font-size: 11px;
+  font-weight: 600; letter-spacing: .04em; line-height: 17px; text-transform: uppercase; }
+.status { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; }
+/* online: green dot with a ring; email: hollow grey ring; away: filled grey dot. The word beside it always says which. */
+.status .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--line-strong); }
+.status[data-status="online"] { color: var(--online-text); }
+.status[data-status="online"] .dot { background: var(--online); box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--online); }
+.status[data-status="away"] { color: var(--muted); }
+.status[data-status="email"] { color: var(--muted); }
+.status[data-status="email"] .dot { background: transparent; box-shadow: inset 0 0 0 2px var(--field); }
+.contact-bio { font-size: 13.5px; }
+.contact-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 2px; font-size: 12.5px; }
+
+/* ---- Files ---- */
+.files { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 18px; padding: 0; height: 100%; }
+.files-folders { padding: 10px 8px; border-right: 1px solid var(--line); background: var(--panel); }
+.files-col { padding: 16px 20px 20px 0; overflow: auto; }
+.files-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.files-list li { display: flex; align-items: center; gap: 10px; }
+.files-list .file-row-item { flex: 1; }
+.files-in { flex: none; width: 110px; font-size: 12.5px; }
+@container app (max-width: 720px) {
+  .files { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; gap: 0; }
+  .files-folders { display: flex; gap: 4px; overflow-x: auto; padding: 6px 8px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .files-folder { width: auto; white-space: nowrap; }
+  .files-col { padding: 14px; }
+  .files-in { display: none; }
+}
+
+/* ---- Calendar ---- */
+.cal-bar { margin-bottom: 14px; }
+.cal-head { margin-bottom: 10px; font-size: 15px; }
+.cal-week { display: grid; grid-template-columns: repeat(var(--days, 5), minmax(0, 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
+.cal-day { min-height: 180px; padding: 10px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.cal-day.today { border-color: var(--accent-line); box-shadow: inset 0 3px 0 var(--accent); }
+.cal-date { display: flex; justify-content: space-between; gap: 6px; margin-bottom: 8px; font-size: 13px; }
+.cal-events, .cal-mini { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.cal-event { display: grid; gap: 2px; padding: 8px; border-left: 3px solid var(--text-2); border-radius: 4px; background: var(--panel); font-size: 12.5px; }
+.cal-event[data-kind="class"] { border-left-color: var(--accent); }
+.cal-event[data-kind="deadline"] { border-left-color: var(--danger); background: var(--danger-soft); }
+.cal-kind { color: var(--muted); font-size: 11.5px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+.cal-event strong { font-size: 13px; font-weight: 600; }
+.cal-free { font-size: 13px; }
+.cal-term { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 8px; margin: 0; padding: 0; list-style: none; }
+.cal-wk { display: grid; align-content: start; gap: 6px; min-height: 92px; padding: 10px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; font-size: 12.5px; }
+.cal-wk.closed { background: var(--panel); }
+.cal-wk.current { border-color: var(--accent-line); box-shadow: inset 0 3px 0 var(--accent); }
+.cal-wk.cal-break { border-style: dashed; background: repeating-linear-gradient(135deg, #fff 0 6px, var(--panel) 6px 12px); }
+.cal-wk-head { display: flex; justify-content: space-between; gap: 6px; font-size: 13px; }
+.cal-tag { justify-self: start; padding: 0 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 11.5px; font-weight: 600; }
+.cal-mini li { display: flex; align-items: baseline; gap: 6px; }
+.cal-dot { flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--text-2); }
+.cal-dot[data-kind="class"] { background: var(--accent); }
+.cal-dot[data-kind="deadline"] { background: var(--danger); }
+@container app (max-width: 720px) {
+  .cal-week { grid-template-columns: minmax(0, 1fr); }
+  .cal-day { min-height: 0; }
+  .cal-day:not(:has(.cal-event)) .cal-free { display: none; }
+}
+
+/* ---- Dashboards ---- */
+.dashboards .chips { margin-bottom: 14px; }
+.dash-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.dash-head h3 { font-size: 16px; }
+.table-wrap { max-width: 100%; overflow: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+.dash-table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+.dash-table th, .dash-table td { padding: 7px 12px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+.dash-table .num { text-align: right; }
+.dash-table thead th { position: sticky; top: 0; padding: 0; background: var(--panel); }
+.dash-table .sort { display: flex; align-items: center; gap: 4px; width: 100%; padding: 8px 12px; border: 0; background: transparent; font-weight: 600; text-align: inherit; }
+.dash-table th.num .sort { justify-content: flex-end; }
+.dash-table tbody tr:nth-child(even) { background: var(--bg); }
+
+/* ---- Credits and the phone layout's Desk tab ---- */
+.credits > p { margin-bottom: 12px; }
+.credit-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.credit { display: grid; justify-items: start; gap: 3px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; font-size: 13.5px; }
+.credit .btn { margin-top: 6px; font-size: 13px; }
+.desk-app > p { margin-bottom: 14px; }
+.desk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+.desk-item { display: grid; justify-items: center; gap: 8px; width: 100%; padding: 18px 8px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; font-weight: 500; }
+.desk-item:hover { background: var(--panel); }
+.desk-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--panel); color: var(--text-2); }

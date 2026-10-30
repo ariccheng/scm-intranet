@@ -1,0 +1,165 @@
+{
+  "name": "Saguaro Kitchen Co.",
+  "industry": "Fast-casual restaurants: healthy bowls",
+  "founded": 2016,
+  "headquarters": "Tempe, AZ",
+  "employees": 300,
+  "logo": "assets/img/logo-placeholder.svg",
+  "accentColor": "#8C1D40",
+  "classDays": [
+    "2027-01-14",
+    "2027-01-21",
+    "2027-01-28",
+    "2027-02-04",
+    "2027-02-11",
+    "2027-02-18",
+    "2027-02-25",
+    "2027-03-04",
+    "2027-03-18",
+    "2027-03-25",
+    "2027-04-01",
+    "2027-04-08",
+    "2027-04-15",
+    "2027-04-22",
+    "2027-04-29"
+  ],
+  "breaks": [
+    {
+      "date": "2027-03-11",
+      "label": "Spring break"
+    }
+  ],
+  "timeZone": "America/Phoenix",
+  "wallpaper": "assets/img/wallpaper-placeholder.svg",
+  "newHireTitle": "Supply Chain Analyst",
+  "centralKitchen": {
+    "name": "Headquarters & Central Kitchen",
+    "city": "Tempe",
+    "lat": 33.4,
+    "lon": -111.96
+  },
+  "stores": [
+    { "code": "S01", "name": "Tempe Mill Ave", "opened": 2016, "type": "Urban", "lat": 33.425, "lon": -111.94 },
+    { "code": "S02", "name": "Tempe South", "opened": 2017, "type": "Urban", "lat": 33.35, "lon": -111.93 },
+    { "code": "S03", "name": "Mesa Downtown", "opened": 2018, "type": "Urban", "lat": 33.415, "lon": -111.831 },
+    { "code": "S04", "name": "Gilbert Heritage", "opened": 2020, "type": "Suburban", "lat": 33.353, "lon": -111.789 },
+    { "code": "S05", "name": "Chandler Downtown", "opened": 2018, "type": "Suburban", "lat": 33.303, "lon": -111.841 },
+    { "code": "S06", "name": "Queen Creek", "opened": 2025, "type": "Urban edge", "lat": 33.249, "lon": -111.634 },
+    { "code": "S07", "name": "Scottsdale Old Town", "opened": 2019, "type": "Urban", "lat": 33.494, "lon": -111.926 },
+    { "code": "S08", "name": "Phoenix Arcadia", "opened": 2020, "type": "Urban", "lat": 33.497, "lon": -111.985 },
+    { "code": "S09", "name": "Phoenix Biltmore", "opened": 2022, "type": "Urban", "lat": 33.51, "lon": -112.03 },
+    { "code": "S10", "name": "Phoenix Downtown", "opened": 2019, "type": "Urban", "lat": 33.448, "lon": -112.074 },
+    { "code": "S11", "name": "Glendale", "opened": 2022, "type": "Suburban", "lat": 33.538, "lon": -112.186 },
+    { "code": "S12", "name": "Peoria", "opened": 2025, "type": "Urban edge", "lat": 33.58, "lon": -112.237 }
+  ],
+  "channels": [
+    {
+      "id": "dine-in",
+      "name": "Dine-in",
+      "text": "Order at the counter in any of our stores."
+    },
+    {
+      "id": "app-web",
+      "name": "Saguaro Kitchen app and website",
+      "text": "Order ahead for pickup."
+    },
+    {
+      "id": "roadrunner",
+      "name": "RoadRunner Eats",
+      "text": "Delivery partner."
+    },
+    {
+      "id": "quickplate",
+      "name": "QuickPlate",
+      "text": "Delivery partner."
+    },
+    {
+      "id": "sauces",
+      "name": "Bottled sauces",
+      "text": "Sold on our website and at Desert Fresh Market stores."
+    }
+  ],
+  "menu": {
+    "season": "Fall",
+    "items": [
+      {
+        "name": "Sonoran Chicken Bowl"
+      },
+      {
+        "name": "Carne Asada Bowl"
+      },
+      {
+        "name": "Green Chile Pork Bowl"
+      },
+      {
+        "name": "Desert Harvest Veggie Bowl"
+      },
+      {
+        "name": "Spicy Tofu Bowl"
+      },
+      {
+        "name": "Avocado Crunch Salad"
+      },
+      {
+        "name": "Mesquite BBQ Chicken Bowl"
+      },
+      {
+        "name": "Street Corn Elote Bowl",
+        "new": true
+      },
+      {
+        "name": "Hatch Chile Steak Bowl",
+        "new": true
+      },
+      {
+        "name": "Kale Caesar Power Bowl",
+        "new": true
+      },
+      {
+        "name": "Gochujang Chicken Bowl",
+        "new": true
+      }
+    ],
+    "sauces": [
+      "Saguaro Green Sauce",
+      "Chipotle Crema",
+      "Cilantro Lime Dressing",
+      "Mesquite BBQ",
+      "Gochujang Glaze"
+    ]
+  },
+  "suppliers": [
+    {
+      "name": "Desert Valley Produce",
+      "supplies": "Vegetables and leafy greens",
+      "from": "Growing regions in Arizona and California",
+      "contact": "Tom Whitaker, Account Manager",
+      "phone": "(602) 555-0142",
+      "email": "tom.whitaker@desertvalley.example"
+    },
+    {
+      "name": "Frontera Fresh Imports",
+      "supplies": "Avocados, limes and chiles",
+      "from": "Imported from Mexico",
+      "contact": "Order Desk",
+      "phone": "(520) 555-0118",
+      "email": "orders@fronterafresh.example"
+    },
+    {
+      "name": "Copper State Foodservice",
+      "supplies": "Meat and dry goods",
+      "from": "",
+      "contact": "Customer Service",
+      "phone": "(602) 555-0167",
+      "email": "service@copperstatefs.example"
+    },
+    {
+      "name": "GreenLoop Packaging",
+      "supplies": "Compostable bowls and packaging",
+      "from": "",
+      "contact": "Sales Team",
+      "phone": "(480) 555-0131",
+      "email": "sales@greenloop.example"
+    }
+  ]
+}

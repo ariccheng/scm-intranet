@@ -1,0 +1,45 @@
+/* ---- Base ----------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+html, body { margin: 0; height: 100%; }
+body { background: #000; color: var(--text); font: 15px/1.5 var(--font-ui); overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; }
+html[data-layout="desk"], html[data-layout="desk"] body { overflow: hidden; }
+html[data-layout="mobile"] body { background: var(--bg); }
+[hidden] { display: none !important; }
+img, svg { display: block; }
+button, input, textarea, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+a { color: var(--accent); }
+h1, h2, h3, h4, h5 { margin: 0; font-weight: 600; line-height: 1.25; }
+p { margin: 0; }
+
+.sr-only { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.noscript { position: fixed; inset: 0; display: grid; place-content: center; color: #eee; font: 16px system-ui, sans-serif; }
+
+/* one focus ring everywhere: white inner line, accent outer line; the pair stays visible on light pages
+   and on the dark lock screen (the accent is at least 4.5:1 on the page background, see core/color.js) */
+:focus { outline: none; }
+:focus-visible { outline: 2px solid #fff; outline-offset: 1px; box-shadow: 0 0 0 5px var(--accent); }
+
+/* buttons inside the computer */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 34px; padding: 6px 14px;
+  border: 1px solid var(--line); border-radius: var(--radius); background: #fff; color: var(--text); font-weight: 500;
+  font-size: 14px; line-height: 1.2; text-decoration: none; transition: background var(--t-ui), border-color var(--t-ui); }
+.btn:hover { border-color: var(--line-strong); background: var(--panel); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { border-color: color-mix(in srgb, var(--accent) 85%, #000); background: color-mix(in srgb, var(--accent) 85%, #000); }
+.btn.danger { background: var(--danger); border-color: var(--danger); color: #fff; }
+.btn:disabled { background: var(--panel); border-color: var(--panel); color: var(--muted); }
+.btn svg { flex: none; }
+.icon-btn { display: inline-grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 6px;
+  background: transparent; color: var(--text-2); }
+.icon-btn:hover { background: var(--panel); color: var(--text); }
+
+/* name pop-up for desk objects; decorative, the buttons carry their own labels */
+.tip { position: fixed; z-index: 30; padding: 4px 10px; border-radius: 6px; background: rgba(25, 25, 25, .9); color: #fff;
+  font: 500 13px/1.3 var(--font-ui); pointer-events: none; white-space: nowrap; opacity: 0; transform: translate(-50%, -100%);
+  transition: opacity var(--t-ui); }
+.tip.on { opacity: 1; }

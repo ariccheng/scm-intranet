@@ -1,0 +1,6 @@
+[
+  { "id": "w01-handbook", "folder": "Onboarding", "name": "Employee Handbook (project rules)", "type": "pdf", "url": "files/employee-handbook.pdf" },
+  { "id": "w01-company-profile", "folder": "Company", "name": "Company profile", "type": "pdf", "url": "#" },
+  { "id": "w01-stores-menu", "folder": "Company", "name": "Stores and menu list", "type": "sheet", "url": "files/stores-and-menu.xlsx" },
+  { "id": "w01-comm-log", "folder": "Templates", "name": "Team communication log (template)", "type": "doc", "url": "#" }
+]

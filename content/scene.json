@@ -1,0 +1,226 @@
+{
+  "stage": {
+    "width": 3200,
+    "height": 2000,
+    "matte": "#2A2622"
+  },
+  "base": {
+    "srcset": []
+  },
+  "safe": null,
+  "lightSide": "left",
+  "monitor": {
+    "face": {
+      "x": 30,
+      "y": 6,
+      "w": 40,
+      "h": 40
+    },
+    "screen": {
+      "x": 30.5,
+      "y": 6.8,
+      "w": 39,
+      "h": 37.3,
+      "radius": 0.1
+    },
+    "corners": null,
+    "led": {
+      "x": 68.9,
+      "y": 45.1
+    },
+    "reflection": {
+      "x": 27,
+      "y": 55,
+      "w": 46,
+      "h": 14
+    }
+  },
+  "objects": [
+    {
+      "id": "sticky",
+      "x": 69.4,
+      "y": 30,
+      "w": 6.4,
+      "h": 10.2,
+      "rotate": 4,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    },
+    {
+      "id": "map",
+      "x": 74,
+      "y": 7,
+      "w": 13,
+      "h": 19,
+      "rotate": 1.5,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    },
+    {
+      "id": "calendar",
+      "x": 12.5,
+      "y": 37.5,
+      "w": 10.5,
+      "h": 12.5,
+      "rotate": 0,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    },
+    {
+      "id": "suppliers",
+      "x": 77.5,
+      "y": 33,
+      "w": 9.5,
+      "h": 12.5,
+      "rotate": 0,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    },
+    {
+      "id": "coffee",
+      "x": 23.5,
+      "y": 49.5,
+      "w": 5.6,
+      "h": 11,
+      "rotate": 0,
+      "image": null,
+      "mode": "auto",
+      "shape": "ellipse"
+    },
+    {
+      "id": "newspaper",
+      "x": 3,
+      "y": 54,
+      "w": 17,
+      "h": 17,
+      "rotate": -7,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    },
+    {
+      "id": "badge",
+      "x": 21.5,
+      "y": 66,
+      "w": 5.5,
+      "h": 13,
+      "rotate": 11,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    },
+    {
+      "id": "menu",
+      "x": 29,
+      "y": 72,
+      "w": 10.5,
+      "h": 14,
+      "rotate": -4,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    },
+    {
+      "id": "phone",
+      "x": 60,
+      "y": 72,
+      "w": 4.4,
+      "h": 11,
+      "rotate": -9,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    },
+    {
+      "id": "notebook",
+      "x": 72,
+      "y": 56,
+      "w": 10.5,
+      "h": 18,
+      "rotate": -5,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    }
+  ],
+  "spots": [
+    {
+      "id": "spot-1",
+      "x": 44,
+      "y": 73,
+      "w": 10,
+      "h": 15.5,
+      "rotate": 3,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    },
+    {
+      "id": "spot-2",
+      "x": 86,
+      "y": 53,
+      "w": 9.5,
+      "h": 18,
+      "rotate": 6,
+      "image": null,
+      "mode": "auto",
+      "shape": "rect"
+    }
+  ],
+  "decor": [
+    {
+      "id": "frame",
+      "x": 10.5,
+      "y": 6,
+      "w": 12,
+      "h": 20.5,
+      "image": "assets/img/asu-alumni.png"
+    },
+    {
+      "id": "cactus",
+      "x": 88,
+      "y": 13,
+      "w": 9.5,
+      "h": 32
+    },
+    {
+      "id": "pencup",
+      "x": 25,
+      "y": 33.5,
+      "w": 3.6,
+      "h": 11
+    },
+    {
+      "id": "stand",
+      "x": 44,
+      "y": 44,
+      "w": 12,
+      "h": 13
+    },
+    {
+      "id": "keyboard",
+      "x": 36.5,
+      "y": 60.5,
+      "w": 27,
+      "h": 8
+    },
+    {
+      "id": "mouse",
+      "x": 65.5,
+      "y": 61,
+      "w": 3.2,
+      "h": 7.5
+    },
+    {
+      "id": "pen",
+      "x": 66,
+      "y": 76,
+      "w": 9,
+      "h": 4
+    }
+  ]
+}

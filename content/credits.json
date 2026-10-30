@@ -1,0 +1,6 @@
+[
+  { "item": "IBM Plex Sans (typeface)", "author": "IBM Corp.", "license": "SIL Open Font License 1.1", "url": "https://github.com/IBM/plex" },
+  { "item": "Caveat (typeface)", "author": "The Caveat Project Authors", "license": "SIL Open Font License 1.1", "url": "https://github.com/googlefonts/caveat" },
+  { "item": "Lucide icons", "author": "Lucide Contributors", "license": "ISC License", "url": "https://lucide.dev" },
+  { "item": "Freeway lines on the store map", "author": "OpenStreetMap contributors", "license": "Open Database License (ODbL)", "url": "https://www.openstreetmap.org/copyright" }
+]
